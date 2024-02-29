@@ -13,7 +13,7 @@ API do projeto MinhaEstante - Controle de leituras pessoais
 ### Endpoint
 - [Listar todas as resenhas](#listar-todas-as-resenha)
 - [Cadastrar resenha](#cadastrar-resenha)
-- [Detalhes da Leitura](#detalhes-da-resenha)
+- [Detalhes da Resenha](#detalhes-da-resenha)
 - [Apagar Resenhas](#apagar-resenhas)
 - [Atualizar resenhas](#atualizar-resenhas)
 
