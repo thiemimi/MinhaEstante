@@ -29,7 +29,7 @@ Retorna um array com todas as resenhas cadastradas
     {
         "id": 1,
         "nome": "Resenha",
-        "icone": "Resenha"
+        "icone": "Nome do livro"
     }
  ]
  ```
@@ -59,7 +59,7 @@ Cria uma nova resenha com os dados enviados no copor da requisição
 ```js
 {
     "nome": "Resenha",
-    "icone": "Resenha"
+    "icone": "Nome do livro"
 }
 ```
 
@@ -69,7 +69,7 @@ Cria uma nova resenha com os dados enviados no copor da requisição
 {
     "id": 1,
     "nome": "Resenha",
-    "icone": "Resenha"
+    "icone": "Nome do livro"
 }
  
  ```
@@ -92,7 +92,7 @@ Retornar os detalhes da resenha com o `id` informado como parâmetro de path
 {
     "id": 1,
     "nome": "Resenha",
-    "icone": "Resenha"
+    "icone": "Nome do livro"
 }
  
  ```
@@ -135,7 +135,7 @@ Altera os dados da resenha especificada no `id`, utilizando as informações env
 ```js
 {
     "nome": "Resenha",
-    "icone": "Resenha"
+    "icone": "Nome do livro"
 }
 ```
 
@@ -144,7 +144,7 @@ Altera os dados da resenha especificada no `id`, utilizando as informações env
 {
     "id": 1,
     "nome": "Resenha",
-    "icone": "Resenha"
+    "icone": "Nome do livro"
 }
 ```
 #### Código de Status
