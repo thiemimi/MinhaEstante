@@ -14,8 +14,8 @@ API do projeto MinhaEstante - Controle de leituras pessoais
 - [Listar todas as resenhas](#listar-todas-as-resenha)
 - [Cadastrar resenha](#cadastrar-resenha)
 - [Detalhes da Resenha](#detalhes-da-resenha)
-- [Apagar Resenhas](#apagar-resenhas)
-- [Atualizar resenhas](#atualizar-resenha)
+- [Apagar Resenha](#apagar-resenha)
+- [Atualizar resenha](#atualizar-resenha)
 
 ### Listar todas as resenhas
 
