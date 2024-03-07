@@ -2,11 +2,15 @@ package br.com.fiap.minhaestante.model;
 
 import java.util.Random;
 
-public record Resenha(Long id, String nome, String icone) {
-    public Resenha(Long id, String nome, String icone){
-        this.id = Math.abs(new Random().nextLong());
-        this.nome = nome;
-        this.icone = icone;
+import javax.xml.crypto.Data;
+
+public record Resenha(Long id, String tituloResenha, String conteudoResenha, int nota, Data dataPostagem) {
+    public Resenha(Long id, String tituloResenha, String conteudoResenha, int nota, Data dataPostagem){
+        this.id = (id == null)? Math.abs(new Random().nextLong()): id;
+        this.tituloResenha = tituloResenha;
+        this.conteudoResenha = conteudoResenha;
+        this.nota = nota;
+        this.dataPostagem = dataPostagem;
     }
 
 }
