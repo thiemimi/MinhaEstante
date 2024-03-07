@@ -28,8 +28,10 @@ Retorna um array com todas as resenhas cadastradas
  [
     {
         "id": 1,
-        "nome": "Resenha",
-        "icone": "Nome do livro"
+        "tituloResenha": "Titulo da resenha",
+        "conteudoResenha": "descrição da resenha"
+        "nota": "nota da resenha"
+        "dataPostagem": "data da postagem da resenha"
     }
  ]
  ```
@@ -57,20 +59,24 @@ Cria uma nova resenha com os dados enviados no copor da requisição
 
 
 ```js
-{
-    "nome": "Resenha",
-    "icone": "Nome do livro"
-}
+    {
+        "tituloResenha": "Titulo da resenha",
+        "conteudoResenha": "descrição da resenha"
+        "nota": "nota da resenha"
+        "dataPostagem": "data da postagem da resenha"
+    }
 ```
 
 #### Exemplo da resposta
  ```js
  
-{
-    "id": 1,
-    "nome": "Resenha",
-    "icone": "Nome do livro"
-}
+ {
+   "id": 1,
+   "tituloResenha": "Titulo da resenha",
+   "conteudoResenha": "descrição da resenha"
+   "nota": "nota da resenha"
+   "dataPostagem": "data da postagem da resenha"
+ }
  
  ```
 #### Código de Status
@@ -89,12 +95,13 @@ Retornar os detalhes da resenha com o `id` informado como parâmetro de path
 ### Exemplo de resposta
  ```js
  // requisição para /leitura/1
-{
-    "id": 1,
-    "nome": "Resenha",
-    "icone": "Nome do livro"
-}
- 
+    {
+        "id": 1,
+        "tituloResenha": "Titulo da resenha",
+        "conteudoResenha": "descrição da resenha"
+        "nota": "nota da resenha"
+        "dataPostagem": "data da postagem da resenha"
+    }
  ```
 
  #### Código de status
@@ -133,19 +140,23 @@ Altera os dados da resenha especificada no `id`, utilizando as informações env
 |icone|string|✔️|O nome do ícone de acordo com a biblioteca Material Icons|
 
 ```js
-{
-    "nome": "Resenha",
-    "icone": "Nome do livro"
-}
+    {
+        "tituloResenha": "Titulo da resenha",
+        "conteudoResenha": "descrição da resenha"
+        "nota": "nota da resenha"
+        "dataPostagem": "data da postagem da resenha"
+    }
 ```
 
 ### Exemplo de resposta
 ```js
-{
-    "id": 1,
-    "nome": "Resenha",
-    "icone": "Nome do livro"
-}
+   {
+     "id": 1,
+     "tituloResenha": "Titulo da resenha",
+     "conteudoResenha": "descrição da resenha"
+     "nota": "nota da resenha"
+     "dataPostagem": "data da postagem da resenha"
+   }
 ```
 #### Código de Status
 | codigo | descrição |
