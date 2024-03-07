@@ -119,7 +119,7 @@ Apaga a categoria com id especificado no parâmetro de path
 404 | Não existe categoria com o `id` informado
 -----
 
-### Atualizar Resenha
+### Editar Resenha
 
 `PUT` /resenha/ `{id}`
 Altera os dados da resenha especificada no `id`, utilizando as informações enviadas no corpo da requisição
