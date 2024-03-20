@@ -1,8 +1,11 @@
 package br.com.fiap.minhaestante.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
+
 @Data
 @Entity
 public class Resenha{
@@ -12,7 +15,7 @@ public class Resenha{
     private String tituloResenha;
     private String conteudoResenha;
     private int nota;
-    private Data dataPostagem;
+    private LocalDate dataPostagem;
 }
 
 // criar um record no java vai definir uma estrutura de dados que tem seus atributos, seus métodos de 
