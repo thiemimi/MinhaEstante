@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Data
@@ -14,6 +15,7 @@ public class Resenha{
     private Long id;
     private String tituloResenha;
     private String conteudoResenha;
+    @Positive
     private int nota;
     private LocalDate dataPostagem;
 }
