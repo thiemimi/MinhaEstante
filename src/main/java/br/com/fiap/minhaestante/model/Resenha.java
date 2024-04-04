@@ -13,7 +13,9 @@ public class Resenha{
 
     @Id
     private Long id;
+    @@NotBlank(message = "{resenha.tituloResenha.notblank}")
     private String tituloResenha;
+    @NotNull
     private String conteudoResenha;
     @Positive
     private int nota;
