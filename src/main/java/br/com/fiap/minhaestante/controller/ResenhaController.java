@@ -21,6 +21,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import br.com.fiap.minhaestante.model.Resenha;
 import br.com.fiap.minhaestante.repository.ResenhaRepository;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -38,7 +39,7 @@ public class ResenhaController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public Resenha create(@RequestBody Resenha resenha) {
+    public Resenha create(@RequestBody @Valid Resenha resenha) {
         log.info("Cadastrando resenha {}", resenha);
         return repository.save(resenha);
     }
