@@ -13,7 +13,7 @@ public class MinhaestanteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MinhaestanteApplication.class, args);
 	}
-	 //RM
+	
 	@RequestMapping
 	@ResponseBody
 	public String home(){

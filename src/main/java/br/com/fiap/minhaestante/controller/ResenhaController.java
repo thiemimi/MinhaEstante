@@ -23,73 +23,60 @@ import br.com.fiap.minhaestante.model.Resenha;
 import br.com.fiap.minhaestante.repository.ResenhaRepository;
 import lombok.extern.slf4j.Slf4j;
 
-
 @RestController
-@RequestMapping("/resenha")
+@RequestMapping("resenha")
 @Slf4j
 public class ResenhaController {
-    
-    @Autowired //Injeçaõ de Dependência - Inversão de Controle
+
+    @Autowired // Injeção de Dependência - Inversão de Controle
     ResenhaRepository repository;
 
-    //localhost
     @GetMapping
-    public List<Resenha> index(){
+    public List<Resenha> index() {
         return repository.findAll();
     }
 
-
     @PostMapping
     @ResponseStatus(CREATED)
-    public Resenha create(@RequestBody Resenha resenha){ //binding
-        log.info("cadastrando resenha {}", resenha);
+    public Resenha create(@RequestBody Resenha resenha) {
+        log.info("Cadastrando resenha {}", resenha);
         return repository.save(resenha);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Resenha> show(@PathVariable Long id){
-        log.info("buscando resenha com id{}", id);
+    public ResponseEntity<Resenha> show(@PathVariable Long id) {
+        log.info("buscando resenha com id {}", id);
 
         return repository
-            .findById(id)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+                .findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
 
     }
 
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
-    public void destroy(@PathVariable Long id){
+    public void destroy(@PathVariable Long id) {
         log.info("apagando resenha {}", id);
-        verificarSeResenhaExiste(id);
+        verificarSeCategoriaExiste(id);
         repository.deleteById(id);
-    
     }
 
     @PutMapping("{id}")
-    public Resenha update(@PathVariable Long id, @RequestBody Resenha resenha){
+    public Resenha update(@PathVariable Long id, @RequestBody Resenha resenha) {
         log.info("atualizar resenha {} para {}", id, resenha);
 
-        verificarSeResenhaExiste(id);
+        verificarSeCategoriaExiste(id);
         resenha.setId(id);
         return repository.save(resenha);
-
     }
 
-    private void verificarSeResenhaExiste(Long id) {
+    private void verificarSeCategoriaExiste(Long id) {
         repository
-            .findById(id)
-            .orElseThrow(() -> new ResponseStatusException(
-                                        NOT_FOUND,
-                                        "Não existe resenha com o id informado"
-                                        ));
+                .findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        NOT_FOUND,
+                        "Não existe resenha com o id informado"));
     }
 
-    // private Optional<Resenha> getResenhaById(Long id) {
-    //     var resenhaEncontrada = repository
-    //                                 .stream()
-    //                                 .filter(r -> r.id().equals(id))
-    //                                 .findFirst();
-    //     return resenhaEncontrada;
-    // }
 }
