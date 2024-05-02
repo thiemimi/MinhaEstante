@@ -26,6 +26,6 @@ public class Estante {
 
     private LocalDate dataInicioLeitura;
 
-    @TipoEstante
-    private String StatusLeitura;
+    // @TipoEstante
+    // private String StatusLeitura;
 }
