@@ -17,15 +17,15 @@ public class Estante {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @NotBlank(message = "{estante.tituloLivro.notblank}")
+   // @NotBlank(message = "{estante.tituloLivro.notblank}")
     private String tituloLivro;
 
     private String genero;
 
     private String autor;
 
-    private LocalDate dataInicioLeitura;
+    private String icone;
 
-    // @TipoEstante
-    // private String StatusLeitura;
+    //@TipoEstante
+    //private String StatusLeitura;
 }
